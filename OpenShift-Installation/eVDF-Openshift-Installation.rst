@@ -17,6 +17,22 @@ Has been tested with Red Hat Enterprise Linux 7.4 Update KVM Guest Image (201801
 
 .. Note:: For information see the *VSS IPSec Group-Key Encryption for Linux Workloads* section in the *Nuage VSS User Guide*.
 
+Preparing Operating System
+============================
+
+On Installer, Master, and Nodes:
+
+1. Ensure PEERDNS="yes" is configure in /etc/sysconfig/network-scripts/ifcfg-eth*
+2. Ensure hostnames are resolvable via DNS 
+3. If using proxy for internet access, update the following fields in /etc/rhsm/rhsm.conf
+
+   ::
+    
+         proxy_hostname = <dns or ip> 
+         proxy_port = <port>
+         proxy_user = <if needed>
+         proxy_password = <if needed> 
+
 
 Ansible Installation
 ==========================
