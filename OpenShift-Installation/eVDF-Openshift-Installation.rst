@@ -205,7 +205,9 @@ Setup
       nuage/cni                                                  <version>           01be44d6d037        5 weeks ago         399.1 MB
       nuage/strongswan                                           <version>           cd8985dbc9ae        8 weeks ago         266.8 MB
 
-5. Install the eVDF bootstrap agent “Nuage-evdf-x.y.z-b-bundle.bin” on the node with “-d” option. (where x.y.z-b represents your Nuage version)
+5. Move zero factor bootstrap file coresponding to gateway to /var/lib/ and rename to cloud-init-zfb.yaml. Both Master and Nodes need to be boostrapped using this method. 
+
+6. Install the eVDF bootstrap agent “Nuage-evdf-x.y.z-b-bundle.bin” on the node with “-d” option. (where x.y.z-b represents your Nuage version)
 
    ::
     
