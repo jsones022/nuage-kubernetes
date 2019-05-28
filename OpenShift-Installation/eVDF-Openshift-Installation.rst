@@ -13,6 +13,8 @@ Supported Platforms
 
 The VSP integration with eVDF on OpenShift is supported on RHEL Server hosts (Version 7.4).
 
+Has been tested with Red Hat Enterprise Linux 7.4 Update KVM Guest Image (20180125) Image availabe on RHEL downloads webpage: https://access.redhat.com/downloads
+
 .. Note:: For information see the *VSS IPSec Group-Key Encryption for Linux Workloads* section in the *Nuage VSS User Guide*.
 
 
