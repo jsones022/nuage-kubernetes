@@ -24,14 +24,18 @@ On Installer, Master, and Nodes:
 
 1. Ensure PEERDNS="yes" is configure in /etc/sysconfig/network-scripts/ifcfg-eth*
 2. Ensure hostnames are resolvable via DNS 
-3. If using proxy for internet access, update the following fields in /etc/rhsm/rhsm.conf
+3. If using proxy for internet access, update the following in /etc/rhsm/rhsm.conf and /etc/yum.conf
 
    ::
-    
-         proxy_hostname = <dns or ip> 
+   
+    Update fields in rhsm.conf: 
+         proxy_hostname = <dns hostname or ip> 
          proxy_port = <port>
          proxy_user = <if needed>
          proxy_password = <if needed> 
+
+      Append to yum.conf
+         proxy=<full proxy url with port>
 
 
 Ansible Installation
