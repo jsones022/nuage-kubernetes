@@ -37,6 +37,24 @@ On Installer, Master, and Nodes:
       Append to yum.conf
          proxy=<full proxy url with port>
 
+4. Register Host to OpenShift Repos
+
+   ::
+   
+         subscription-manager register --username=<username> --password=<password>
+         subscription-manager refresh
+         subscription-manager list --available --matches '*OpenShift*'
+         ## copy pool id of subscription containing OpenShift Container Platform 
+         subscription-manager attach --pool=<pool_id>
+         subscription-manager repos --disable="*"
+         yum repolist
+         # should contain no repos
+         subscription-manager repos \
+            --enable="rhel-7-server-rpms" \
+            --enable="rhel-7-server-extras-rpms" \
+            --enable="rhel-7-server-ose-3.7-rpms" \
+            --enable="rhel-7-fast-datapath-rpms"
+
 
 Ansible Installation
 ==========================
